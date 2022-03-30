@@ -1,0 +1,32 @@
+package:
+  name: geostatspy
+  version: "0.0.25"
+
+source:
+  url: https://files.pythonhosted.org/packages/34/7c/31ebaf00fc86355af6f1744ef592d9a9617b16e508ef6f4d100147abe093/geostatspy-0.0.25.tar.gz
+  sha256: bf7151a8318c8942b2e306c6e72e0cb43e2c051711d67450401fc93a5fccaf68
+
+build:
+  number: 0
+  script: python setup.py install
+
+requirements:
+  build:
+    - python
+    - setuptools
+  host:
+    - python
+  run:
+    - python
+    - numpy
+    - scipy
+    - numba
+    - statsmodels
+    - matplotlib
+    - pandas
+
+about:
+  home: https://github.com/GeostatsGuy/GeostatsPy
+  license: MIT
+  license_file: LICENSE
+  summary: "Geostatistical methods from GSLIB: Geostatistical Library translated and reimplemented in Python"
